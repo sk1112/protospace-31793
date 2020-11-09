@@ -1,0 +1,25 @@
+<%= form_with( model: @user, local: true)  do |f| %>
+  <div class="field">
+    <%= f.label :name, "名前" %><br />
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :profile, "プロフィール" %><br />
+    <%= f.text_field :profile, class: :form__text %>
+  </div>
+
+  <div class="field">
+    <%= f.label :position, "所属" %><br />
+    <%= f.text_field :position, class: :form__text %>
+  </div>
+
+  <div class="field">
+    <%= f.label :occupation, "役職" %><br />
+    <%= f.text_field :occupation, class: :form__text %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "更新する", class: :form__btn %>
+  </div>
+<% end %>
